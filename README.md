@@ -14,3 +14,6 @@ To add or remove packages to download and build, just edit `packages/packages.li
 * pbuilder
 
 `sudo apt install apt-src devscripts pbuilder`
+
+## Antifeatures
+* All dependencies are installed on the host but not used
