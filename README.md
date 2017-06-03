@@ -8,12 +8,9 @@ All scripts you can use are located in `pbuilder/`. Before you can build or down
 To add or remove packages to download and build, just edit `packages/packages.list`.
 
 ## Dependencies
-* apt-src
+* apt
 * bash
 * devscripts
 * pbuilder
 
-`sudo apt install apt-src devscripts pbuilder`
-
-## Antifeatures
-* All dependencies are installed on the host but not used
+`sudo apt install devscripts pbuilder`
