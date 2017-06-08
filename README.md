@@ -12,5 +12,6 @@ To add or remove packages to download and build, just edit `packages/packages.li
 * bash
 * devscripts
 * pbuilder
+* git
 
-`sudo apt install devscripts pbuilder`
+`sudo apt install devscripts pbuilder git`
