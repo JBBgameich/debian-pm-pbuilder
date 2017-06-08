@@ -24,7 +24,7 @@ do
         rm -rf $name-packaging
         cd $name
 
-        dch -b "Automated CI build" -v $version+git`date +%Y%m%d`-1 --distribution stretch
+        dch -b "Automated CI build" -v $version+git`date +%Y%m%d`-1 --distribution testing
         dpkg-buildpackage -S
         cd $packages_path/recipies
     fi
