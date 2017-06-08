@@ -1,0 +1,5 @@
+name=plasma-phone-components
+source=https://github.com/kde/plasma-phone-components
+packaging=http://github.com/jbbgameich/plasma-phone-components-packaging
+packaging_branch=kubuntu_unstable
+version=0.7

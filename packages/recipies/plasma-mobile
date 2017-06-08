@@ -1,0 +1,5 @@
+name=plasma-mobile
+source=https://github.com/kde/plasma-mobile
+packaging=http://github.com/plasma-phone-packaging/plasma-mobile-packaging
+packaging_branch=master
+version=4.10
