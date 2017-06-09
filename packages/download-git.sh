@@ -2,6 +2,9 @@
 
 export packages_path=`pwd`
 
+export packaging_branch=master
+export source_branch=master
+
 cd recipies
 
 for i in *
@@ -15,7 +18,7 @@ do
         echo "Cleaning"
         rm $name -rf
 
-        git clone $source $name --depth 1
+        git clone $source $name -b $source_branch --depth 1
         rm -rf $name/.git
         rm $name/.* # FIXME Add proper option to add .files to the tarball
         tar -cJf $name\_$version+git`date +%Y%m%d`.orig.tar.xz $name/*
@@ -25,7 +28,7 @@ do
         cd $name
 
         dch -b "Automated CI build" -v $version+git`date +%Y%m%d`-1 --distribution testing
-        dpkg-buildpackage -S
+        dpkg-buildpackage -S -d
         cd $packages_path/recipies
     fi
 done
