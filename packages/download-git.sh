@@ -2,15 +2,16 @@
 
 export packages_path=`pwd`
 
-export packaging_branch=master
-export source_branch=master
-
 cd recipies
 
 for i in *
 do
     if test -f "$i" 
     then
+        # Set defaults
+        export packaging_branch=master
+        export source_branch=master
+        
         echo "Creating source package of $i"
         export $(<$i)
         cd ../source
@@ -22,7 +23,7 @@ do
         rm -rf $name/.git
         rm $name/.* # FIXME Add proper option to add .files to the tarball
         tar -cJf $name\_$version+git`date +%Y%m%d`.orig.tar.xz $name/*
-        git clone $packaging $name-packaging -b $packaging_branch --depth 1
+        git clone $packaging $name-packaging -b $packaging_branch
         cp -r $name-packaging/* $name
         rm -rf $name-packaging
         cd $name
