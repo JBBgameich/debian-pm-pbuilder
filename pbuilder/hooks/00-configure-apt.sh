@@ -6,6 +6,7 @@ cat <<EOF >> /etc/apt/sources.list.d/netrunner.list
 # Netrunner / Plasma
 deb http://ds9-eu.s3-website.eu-central-1.amazonaws.com/dci/packages/frameworks stretch-backports main
 deb http://ds9-eu.s3-website.eu-central-1.amazonaws.com/dci/packages/plasma stretch-backports main
+deb http://deb.netrunner.com/dci/packages/netrunner netrunner-1706 frameworks kde-applications plasma qt5
 EOF
 
 cat <<EOF >> /etc/apt/sources.list.d/pkgcloud-gui.list
